@@ -12,11 +12,9 @@ This project recognizes hand gestures using the MediaPipe library to detect hand
 
 The Euclidean distance is used to measure the distance between the thumb tip and other finger tips. This is important for detecting whether the hand is in an open or closed state.
 The formula to calculate the Euclidean distance between two points \( P_1(x_1, y_1) \) and \( P_2(x_2, y_2) \) is:
-
-\[
+$$
 \text{Distance}(P_1, P_2) = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
-\]
-
+$$
 
 - If the distance between the thumb and other finger tips is large (greater than 60 pixels), the hand is classified as **Open Hand**.
 - If the distance is small (less than 60 pixels), the hand is classified as **Closed Fist**.
@@ -33,6 +31,9 @@ Based on the calculations of distances, the following gestures are recognized:
 These gestures are detected in real-time using the MediaPipe Hand model, and corresponding actions are performed, such as pressing keyboard keys (e.g., left, right).
 
 ---
+Output:
+![gestureproof](https://github.com/user-attachments/assets/b03e19fe-42b0-4c06-bb7f-dfea4f1e21e3)
+
 
 ## **Libraries Used**
 
