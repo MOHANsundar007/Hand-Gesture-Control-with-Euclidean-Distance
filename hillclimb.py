@@ -72,11 +72,13 @@ while True:
             cv.putText(image, "Open Hand", (45, 375), cv.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 5)
             keyboard.press(Key.right)
             keyboard.release(Key.left)
+            print(f"Detected Gesture: {gesture}, Right Arrow ")
         elif check_closed_fist(landmarks_list):
             gesture = "Closed Fist"
             cv.putText(image, "Closed Fist", (45, 375), cv.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 5)
             keyboard.press(Key.left)
             keyboard.release(Key.right)
+            print(f"Detected Gesture: {gesture}, Left Arrow ")
         else:
             gesture = "No Gesture"
     cv.imshow("Gesture Recognition", image)
